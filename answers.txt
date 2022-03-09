@@ -1,0 +1,44 @@
+1. fr-единица измерения гибкости, представляет собой долю доступного пространства контейнера.
+2. display: grid;
+   grid-template-columns: 20% 20% 20% 20% 20%;
+
+   display: grid;
+   grid-template-columns: repeat(5,20%);
+3. auto-fill - размещает максимально возможное количество колонок в строке, не поместившееся уходит в нижнюю строку.
+   auto-fit - подстраивает колонки под все доступное пространство, растягивая/сжимая их.
+4. 
+   display: grid;
+   grid-template-columns: 100px 30% 1fr;
+   grid-template-rows: 200px 100px;
+
+5. Нужно использовать свойство justify-content.
+6. Grid-area - сокращение для grid-row-start, grid-column-start, grid-row-end и grid-column-end; grid пространство,  включающее одну или несколько ячеек.
+7. 
+	.header{
+	    grid-area: header;
+	  }
+        .nav{
+	    grid-area: nav;
+	  }
+        .main{
+	    grid-area: main;
+	  }
+        .footer{
+	    grid-area: footer;
+	  }
+
+
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: minmax (20px,auto);
+	gread-template-areas: "header header header header"
+			      "nav main main main"
+			      "nav main main main"
+			      "footer footer footer footer";
+
+8. Свойством auto-fit.
+9. Линиям можно задавать не только числовые значения, но и имена. Имя линии может быть любым, кроме слова span. Линии могут иметь несколько имен.
+   Линии могут быть названы явно в grid-template-rows и grid-template-columns или неявно в grid-template-areas.
+   При объявлении имя заключается в квадратные скобки.   
+			
+10. Функцией repeat: 
+    grid-template-columns: repeat(12,1fr);
